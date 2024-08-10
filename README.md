@@ -2,9 +2,9 @@
 
 Terraform manifest deploys static web page on AWS compute resources.
 
-## Repository structure
+## Table of contents
 
-- [Solution Architecture](#solution-architecture)
+- [Solution architecture](#solution-architecture)
 - [Project structure](#project-structure)
 - [Requirements](#requirements)
 - [How to use](#how-to-use)
@@ -20,20 +20,20 @@ Terraform manifest deploys static web page on AWS compute resources.
 
 ## Project structure
 
-Main directory contains Terraform module calls, Terraform variables and provider configuration.
+Main directory contains Terraform module calls, variables and provider configuration.
 
 Other directories:
 
 - `modules` directory contains Terraform modules
 - `web_app` directory stores application files
-- `docs` directory is used for `README.md` purposes
+- `docs` directory holds `README.md` file
 
 ## Requirements
 
 - AWS Account
-- IAM User with permissions policies: `AmazonEC2FullAccess`, `AmazonS3FullAccess`, `AmazonVPCFullAccess` and `IAMFullAccess`
+- IAM User with permissions policies: `AmazonDynamoDBFullAccess`, `AmazonDynamoDBFullAccess`, `AmazonEC2FullAccess`, `AmazonS3FullAccess`, `AmazonVPCFullAccess` and `IAMFullAccess`
 - S3 Bucket for storage the state file
-- DynamoDB table for locking the state file
+- DynamoDB Table for locking the state file
 - Terraform 1.9
 
 ## How to use

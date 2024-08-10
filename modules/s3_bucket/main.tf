@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "bucket" {
 }
 
 resource "aws_s3_object" "object" {
-  # If content path is null then create 0 objects, otherwise iterate through directory content
+  # If the content path is null, then no objects are created; otherwise, the directory content is iterated through.
   for_each = var.content_path != null ? fileset(var.content_path, "**") : toset([])
 
   bucket = aws_s3_bucket.bucket.id
